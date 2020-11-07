@@ -107,6 +107,11 @@ function mouseReleased(){
 chain.fly();
 }
 function keyPressed(){
-chain.attach(this.polygon,{x:100,y:400})
+  if(keyCode===32){
+    Matter.Body.setPosition(this.polygon,{x:100,y:400})
+    chain.attach(this.polygon,{x:100,y:400})
+    
+  }
+
 
 }
